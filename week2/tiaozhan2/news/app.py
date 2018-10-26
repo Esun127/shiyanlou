@@ -65,7 +65,9 @@ def get_file(file_id):
     content = []
     res =  File.query.filter_by(id=file_id).first()
     if res:
-        category = Category.query.filter_by(id=res.category_id)
+        category = Category.query.filter_by(id=res.category_id).first()
+        if not res:
+            abort(404)
         content.append((res.content, res.created_time, category.name))
         return render_template('file.html', data=content)
     else:
