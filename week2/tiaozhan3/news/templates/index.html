@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p> this is index html</p>
+    {% for it in data %}
+        <p><a href='/files/{{ it[0] }}'> {{ it[1] }}</a></p>
+            <ol title='tags'>
+            {% for i in it[2] %}
+                <li>{{ i }}</li>
+            {% endfor %}
+            </ol>
+    {% endfor %}
+{% endblock %}
