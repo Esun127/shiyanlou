@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <nav>
+    {% for it in data %}
+        <a href='/files/{{ it[0] }}' class='title'> {{ it[1] }}</a>
+    {% endfor %}
+    </nav>
+
+    <div style='width:500px; height:500px; padding:5px 10px;'>
+    {% for it in data %}
+        <p>{{ it[0] }}</p>
+        <div class=='list'>
+            <ol title='tags'>
+                {% for i in it[2] %}
+                    <li>{{ i }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
