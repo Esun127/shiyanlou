@@ -1,0 +1,8 @@
+<application>
+  <component name="ExportableFileTemplateSettings">
+    <internal_templates>
+      <template name="Bash Script.sh" reformat="true" live-template-enabled="true" enabled="true" />
+      <template name="Python Script.py" reformat="true" live-template-enabled="true" enabled="true" />
+    </internal_templates>
+  </component>
+</application>
